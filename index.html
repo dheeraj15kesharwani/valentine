@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>velentine Day card</title>
+    <style>
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: hotpink;
+            overflow: hidden;
+        }
+        .book{
+            position: relative;
+            border-radius: 10px;
+            width: 210px;
+            height: 300px;
+            background-image: url(./img/IMG20230729124309-Recovered.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 97%;
+            box-shadow: 1px 1px 12px black;
+            -webkit-transform: preserve-3d;
+            transform: preserve-3d;
+            -webkit-perspective: 2000px;
+            perspective: 2000px;
+        }
+        .cover{
+            top: 0;
+            position: absolute;
+            background-color: lightgray;
+            background-image: linear-gradient(40deg,pink);
+            background-size: cover;
+            background-position: center;
+            background-image: url(./img/IMG-20230305-WA0014.jpg);
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-transition: all 0.5s;
+            -webkit-transform-origin: 0;
+            transform-origin: 0;
+            box-shadow: 1px 1px 12px black;
+        }
+        .book:hover .cover{
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-transform: rotatey(-85deg);
+            -ms-transform: rotateY(-85deg);
+            transform: rotatey(-180deg);
+        }
+        /* .heart{
+            height: 100px;
+            width: 100px;
+            background-color: #f20044;
+            border: 1px solid black;
+            outline: auto;
+            position: relative;
+            transform: rotate(-45deg);
+            box-shadow: -20px 20px 90px #f20044;
+            animation: gre 0.6s linear infinite;
+        } */
+        /* .heart::before{
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: #f20044;
+            border: 1px solid black;
+            border-radius: 95px;
+            box-sizing: -20px 20px 90px #f20044;
+            top: -50%;
+        } */
+        /* .heart::after{
+            width: 100px;
+            height: 100px;
+            content: '';
+            position: absolute;
+            background-color: #f20044;
+            border: 1px solid black;
+            border-radius: 95px;
+            right: -50%;
+            box-shadow: 20px 2px 90px #f20044;
+        } */
+
+        /* @keyframes gre {
+            0%{
+                transform: rotate(-45deg) scale(1.07);
+            }
+            200%{
+                transform: rotate(-45deg) scale(1.0);
+            }
+            200%{
+                transform: rotate(45deg) scale(0.5);
+            }
+        }
+ */
+
+
+        .notes::before{
+          
+            top: 30px;
+            color: lightcoral;
+            font-family: 'Protest Riot', sans-serif;
+        }
+        .notes::after{
+            top: 60px;
+            font-family: 'Protest Riot', sans-serif;
+        }
+        .heart{
+            margin-top: 20vh;
+            margin-left: 12vh;
+        }
+
+        @media (max-width:650px) {
+            #container{
+                display: flex;
+                flex-direction: column;
+            }
+            #container img{
+                height: 150px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./img/Happy_Valentine's_Day_Decoration_PNG_Clip_Art.png" height="500px">
+        <div class="book">
+            <div class="cover">
+                <div class="notes"></div>
+                <div class="heart">
+                    <img src="./img/new.gif" height="200px">
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <audio autoplay src="./audio/WhatsApp Audio 2024-02-13 at 20.54.21_8bf1c754.mp3"></audio>
+</body>
+</html>
